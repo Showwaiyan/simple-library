@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* variable */
@@ -36,6 +37,14 @@ main {
 
 footer {
     height: 15%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+button {
+    width: 80px;
+    height: 80px;
 }
 
 /* Typography */
@@ -43,4 +52,16 @@ footer {
 /* style */
 body {
     background-color: var(--main-theme);
+}
+
+footer {
+    padding: 0px 10px;
+}
+button {
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--btn-color);
+
+    box-shadow: 0px 0px 8px;
 }
