@@ -13,7 +13,34 @@
 }
 
 /* Layout */
+body {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+header {
+   height: 10%; 
+}
+
+main {
+    height: 75%;
+}
+
+footer {
+    height: 15%;
+}
 
 /* Typography */
 
 /* style */
+body {
+    background-color: var(--main-theme);
+}
