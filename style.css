@@ -39,6 +39,9 @@ form input[type="text"] {
     width: 60%;
     height: 60%; 
 }
+form #filter {
+    height: 40%;
+}
 
 main {
     height: 75%;
@@ -78,8 +81,16 @@ form input[type="text"] {
 
    padding: 5px;
 }
-form input[type="text"]:focus {
+form input[type="text"]:focus, form #filter:focus {
     outline: none;
+}
+form #filter {
+    border: none;
+    border-radius: 5px;
+
+    appearance: none;
+
+    text-align: center;
 }
 
 footer {
