@@ -45,6 +45,17 @@ form #filter {
 
 main {
     height: 75%;
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: 200px;
+
+    gap: 10px;
+}
+main div {
+    height: 200px;
+    width: 200px;
 }
 
 footer {
@@ -91,6 +102,15 @@ form #filter {
     appearance: none;
 
     text-align: center;
+}
+
+main {
+    padding: 20px;
+
+    overflow-y: auto;
+}
+main div {
+    background-color: var(--btn-color);
 }
 
 footer {
