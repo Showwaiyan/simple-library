@@ -162,6 +162,11 @@ button {
 
     cursor: pointer;
 }
+section div button {
+    border-radius: 5px;
+
+    background-color: var(--main-theme);
+}
 
 section {
     backdrop-filter: blur(10px);
