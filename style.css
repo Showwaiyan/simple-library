@@ -91,7 +91,7 @@ section {
 }
 
 .book-added {
-    gap: 10px;
+    gap: 25px;
     width: 400px;
     height: 75%;
 }
@@ -118,7 +118,7 @@ form input[type="text"] {
 
    padding: 5px;
 }
-form input[type="text"]:focus, form #filter:focus {
+form input[type="text"]:focus, form #filter:focus, .book-added input {
     outline: none;
 }
 form #filter {
@@ -165,6 +165,15 @@ button {
 
 section {
     backdrop-filter: blur(10px);
+}
+
+.book-added input {
+    height: 10%;
+
+    border: none;
+    border-radius: 10px;
+
+    padding-left: 10px;
 }
 
 .hidden {
