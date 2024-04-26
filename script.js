@@ -1,11 +1,11 @@
 const addedBtn = document.querySelector(".added-btn");
 const cardSection = document.querySelector("section");
-const closeBtn = document.querySelector(".close-btn")
+const saveBtn = document.querySelector(".save-btn")
 
 function toggleCard(e) {
     if (e.target == addedBtn ||
         e.target == cardSection ||
-        e.target == closeBtn) {
+        e.target == saveBtn) {
             cardSection.classList.toggle("hidden");
             e.stopPropagation();
         }
@@ -14,6 +14,6 @@ function toggleCard(e) {
 
 addedBtn.addEventListener('click',toggleCard);
 
-closeBtn.addEventListener('click',toggleCard);
+saveBtn.addEventListener('click',toggleCard);
 
 cardSection.addEventListener('click',toggleCard);
