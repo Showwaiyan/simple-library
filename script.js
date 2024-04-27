@@ -24,14 +24,13 @@ function addBook() {
         author: document.getElementById("author").value,
         pages: document.getElementById("pages").value,
         tag: document.getElementById("tag").value,
-        status: document.getElementById("status").value
+        status: "not-start"
     }
     document.getElementById("img").value = 
     document.getElementById("name").value = 
     document.getElementById("author").value =
     document.getElementById("pages").value = 
     document.getElementById("tag").value = "";
-    document.getElementById("status").value = "not-start";
 
     books.push(book);
     console.log(books);
