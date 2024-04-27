@@ -5,7 +5,7 @@ const saveBtn = document.querySelector(".save-btn");
 const bookShelf = document.querySelector("main");
 
 // Book stored Variable
-const books = [];
+const myLibrary = [];
 
 function toggleCard(e) {
     if (e.target == addedBtn ||
@@ -40,13 +40,16 @@ function addBookToLibrary() {
     document.getElementById("pages").value = 
     document.getElementById("tag").value = "";
 
-    books.push(book);
+    myLibrary.push(book);
+
+    displayBooks();
 }
 
 function displayBooks() {
-    books.forEach(element => {
+    bookShelf.innerHTML = "";
+    myLibrary.forEach(element => {
        bookShelf.innerHTML += `<div>
-       <img src="img/addbutton.png" alt="book-cover">
+       <img src="${element.cover}" alt="book-cover">
        <h3>${element.name}</h3>
        <h4>${element.author}</h4>
        <h4>${element.pages}</h4>
