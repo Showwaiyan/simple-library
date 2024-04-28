@@ -23,7 +23,7 @@ function Book(cover,name,author,pages,tag) {
     this.author = author;
     this.pages = pages;
     this.tag = tag;
-    this.status = "not-start";
+    this.status = "false";
 }
 
 function addBookToLibrary() {
