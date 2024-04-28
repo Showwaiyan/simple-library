@@ -121,7 +121,7 @@ form input[type="text"] {
 form input[type="text"]:focus, form #filter:focus, .book-added input {
     outline: none;
 }
-#filter, #status {
+#filter {
     border: none;
     border-radius: 5px;
 
@@ -179,9 +179,6 @@ section {
     border-radius: 10px;
 
     padding-left: 10px;
-}
-#status {
-    width: 40%;
 }
 
 .hidden {

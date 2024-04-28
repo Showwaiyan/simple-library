@@ -50,15 +50,15 @@ function displayBooks() {
     myLibrary.forEach(element => {
        bookShelf.innerHTML += `<div>
        <img src="${element.cover}" alt="book-cover">
-       <h3>${element.name}</h3>
-       <h4>${element.author}</h4>
-       <h4>${element.pages}</h4>
-       <h4>${element.tag}</h4>
-       <select name="status" id="status">
-           <option value="not-start" selected>Not Start</option>
-           <option value="start">Start Reading</option>
-           <option value="done">Done</option>
-       </select>
+       <h3>Name: ${element.name}</h3>
+       <h4>Author: ${element.author}</h4>
+       <h4>Pages: ${element.pages}</h4>
+       <h4>Tag: ${element.tag}</h4>
+       <aside>
+       <label for="status">Finished</label> 
+       <input type="checkbox" name="status" id="status">
+       </aside>
+
    </div>`
     });
 }
