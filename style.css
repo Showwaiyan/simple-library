@@ -96,6 +96,11 @@ section {
     height: 75%;
 }
 
+#status {
+    height: 20px;
+    width: 20px;
+}
+
 /* Typography */
 
 /* style */
