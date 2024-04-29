@@ -7,6 +7,7 @@ const bookShelf = document.querySelector("main");
 // Book stored Variable
 const myLibrary = [];
 
+// Book add card appear/disappear
 function toggleCard(e) {
     if (e.target == addedBtn ||
         e.target == cardSection ||
@@ -17,6 +18,7 @@ function toggleCard(e) {
 
 }
 
+// Book Constructor
 function Book(cover,name,author,pages,tag) {
     this.cover = cover;
     this.name = name;
@@ -26,6 +28,7 @@ function Book(cover,name,author,pages,tag) {
     this.status = "false";
 }
 
+// Book add to library or store in array
 function addBookToLibrary() {
     const book = new Book(
                 document.getElementById("img").value,
@@ -45,6 +48,7 @@ function addBookToLibrary() {
     displayBooks();
 }
 
+// Display books to UI
 function displayBooks() {
     bookShelf.innerHTML = "";
     myLibrary.forEach(element => {
@@ -55,16 +59,17 @@ function displayBooks() {
        <h4>Pages: ${element.pages}</h4>
        <h4>Tag: ${element.tag}</h4>
        <aside>
-       <label for="status">Finished</label> 
-       <input type="checkbox" name="status" id="status">
+            <label for="status">Finished</label> 
+            <input type="checkbox" name="status" id="status">
        </aside>
-
    </div>`
     });
 }
 
+// Event listener
 addedBtn.addEventListener('click',toggleCard);
 
 saveBtn.addEventListener('click',addBookToLibrary);
 
 cardSection.addEventListener('click',toggleCard);
+
