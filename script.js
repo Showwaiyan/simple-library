@@ -52,17 +52,18 @@ function addBookToLibrary() {
 function displayBooks() {
     bookShelf.innerHTML = "";
     myLibrary.forEach(element => {
-       bookShelf.innerHTML += `<div>
+       bookShelf.innerHTML += 
+    `<div data-index="${myLibrary.length-1}" class="book">
        <img src="${element.cover}" alt="book-cover">
        <h3>Name: ${element.name}</h3>
        <h4>Author: ${element.author}</h4>
        <h4>Pages: ${element.pages}</h4>
        <h4>Tag: ${element.tag}</h4>
        <aside>
-            <label for="status">Finished</label> 
-            <input type="checkbox" name="status" id="status">
+            <label>Finished</label> 
+            <input type="checkbox" name="status" id="status" ${element.status=="false"?"":"checked"}>
        </aside>
-   </div>`
+   </div>` 
     });
 }
 
@@ -72,4 +73,11 @@ addedBtn.addEventListener('click',toggleCard);
 saveBtn.addEventListener('click',addBookToLibrary);
 
 cardSection.addEventListener('click',toggleCard);
+
+bookShelf.addEventListener('click',(e)=>{
+    if (e.target.parentElement.parentElement.className == "book" 
+        && e.target.id == "status") {
+            myLibrary[Number(e.target.parentElement.parentElement.dataset.index)].status = "true";
+        }
+})
 
