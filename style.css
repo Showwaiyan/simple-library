@@ -133,6 +133,8 @@ form input[type="text"]:focus, form #filter:focus, .book-added input {
     appearance: none;
 
     text-align: center;
+
+    cursor: pointer;
 }
 
 main {
