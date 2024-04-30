@@ -3,6 +3,7 @@ const addedBtn = document.querySelector(".added-btn");
 const cardSection = document.querySelector("section");
 const saveBtn = document.querySelector(".save-btn");
 const bookShelf = document.querySelector("main");
+const filterElement = document.querySelector("#filter");
 
 // Book stored Variable
 const myLibrary = [];
@@ -45,13 +46,14 @@ function addBookToLibrary() {
 
     myLibrary.push(book);
 
-    displayBooks();
+    displayBooks(myLibrary);
 }
 
 // Display books to UI
-function displayBooks() {
+function displayBooks(bookArray) {
+    console.log(bookArray);
     bookShelf.innerHTML = "";
-    myLibrary.forEach(element => {
+    bookArray.forEach(element => {
        bookShelf.innerHTML += 
     `<div data-index="${myLibrary.length-1}" class="book">
        <img src="${element.cover}" alt="book-cover">
@@ -79,5 +81,12 @@ bookShelf.addEventListener('click',(e)=>{
         && e.target.id == "status") {
             myLibrary[Number(e.target.parentElement.parentElement.dataset.index)].status = "true";
         }
+})
+
+filterElement.addEventListener("click",(e)=>{
+    console.log(e.target.value);
+    if(e.target.value == "all") displayBooks(myLibrary);
+    else if (e.target.value == "not-start") displayBooks(myLibrary.filter(ele=>ele.status=="false"));
+    else if (e.target.value == "finished") displayBooks(myLibrary.filter(ele=>ele.status=="true"));
 })
 
