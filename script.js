@@ -93,4 +93,5 @@ filterElement.addEventListener("click",(e)=>{
 
 searchBar.addEventListener("input",(e)=>{
     displayBooks(myLibrary.filter(book=>book.name.toLowerCase().startsWith(searchBar.value.toLowerCase())));
+    filterElement.value = "all";
 })
