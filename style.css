@@ -126,7 +126,7 @@ form input[type="text"] {
     font-size: 1.3rem;
 }
 
-section div input[type="text"],section div button {
+section div input,section div button {
     font-size: 1.1rem;
 }
 
