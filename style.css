@@ -101,7 +101,42 @@ section {
     width: 20px;
 }
 
+
+
 /* Typography */
+html {
+    font-size: 16px;
+    font-family: var(--main-font);
+}
+
+form input[type="text"] {
+    font-size: 1.5rem;
+    color: var(--main-theme);
+}
+
+#filter {
+    font-size: 1.2rem;
+    color: var(--main-theme);
+}
+
+.book > * {
+    font-size: 1.2rem;
+}
+.book > h3 {
+    font-size: 1.3rem;
+}
+
+section div input[type="text"],section div button {
+    font-size: 1.1rem;
+}
+
+footer button {
+    font-size: 4rem;
+    font-family: inherit;
+    color: var(--main-theme);
+}
+
+
 
 /* style */
 body {
@@ -149,8 +184,6 @@ div {
     padding: 10px;
 }
 
-
-
 footer {
     padding: 0px 10px;
     
@@ -165,7 +198,7 @@ button {
 
     background-color: var(--btn-color);
 
-    box-shadow: 0px 0px 8px;
+    box-shadow: 0px 0px 15px black;
 
     cursor: pointer;
 }
