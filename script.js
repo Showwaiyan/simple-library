@@ -4,6 +4,7 @@ const cardSection = document.querySelector("section");
 const saveBtn = document.querySelector(".save-btn");
 const bookShelf = document.querySelector("main");
 const filterElement = document.querySelector("#filter");
+const searchBar = document.querySelector('input[type="text"');
 
 // Book stored Variable
 const myLibrary = [];
@@ -90,3 +91,6 @@ filterElement.addEventListener("click",(e)=>{
     else if (e.target.value == "finished") displayBooks(myLibrary.filter(ele=>ele.status=="true"));
 })
 
+searchBar.addEventListener("input",(e)=>{
+    displayBooks(myLibrary.filter(book=>book.name.toLowerCase().startsWith(searchBar.value.toLowerCase())));
+})
