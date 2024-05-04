@@ -177,12 +177,20 @@ main {
 
     overflow-y: auto;
 }
+div.book {
+    background-color: var(--book-bg-color);
+    border-radius: 15px;
+
+    padding: 10px;
+}
+
 div {
     background-color: var(--btn-color);
     border-radius: 15px;
 
     padding: 10px;
 }
+
 
 footer {
     padding: 0px 10px;
